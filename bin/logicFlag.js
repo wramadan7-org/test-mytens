@@ -116,7 +116,7 @@ const writeFileToText = (locationWriteFileParam, locationFileFromParam) => {
   const readFileText = readAndConvertToText(locationFileFromParam);
 
   // Set file name and write the data inside file (data is result of convert TEXT)
-  fs.writeFileSync(`${locationWriteFileParam}/errorLog.log`, readFileText);
+  fs.writeFileSync(`${locationWriteFileParam}/errorLog.txt`, readFileText);
 
   return readFileText;
 };
