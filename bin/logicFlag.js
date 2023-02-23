@@ -106,7 +106,7 @@ const writeFileToJson = (locationWriteFileParam, locationFileFromParam) => {
 };
 
 /**
- * Write file text
+ * Write file TEXT
  * @param { String } locationWriteFileParam
  * @param { String } locationFileFromParam
  * @returns Text|String
@@ -121,9 +121,28 @@ const writeFileToText = (locationWriteFileParam, locationFileFromParam) => {
   return readFileText;
 };
 
+/**
+ * Check file exists or not
+ * @param { String } file
+ * @returns Boolean
+ */
+const isFileExists = async (file) => {
+  try {
+    if (fs.existsSync(file)) {
+      return true;
+    }
+
+    return false;
+  } catch (error) {
+    console.error(error);
+    return false;
+  }
+};
+
 module.exports = {
   readAndConvertToJson,
   readAndConvertToText,
   writeFileToJson,
   writeFileToText,
+  isFileExists,
 };
