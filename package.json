@@ -2,10 +2,18 @@
   "name": "testmytens",
   "version": "1.0.0",
   "description": "Create CLI test from MyTEns",
-  "main": "index.js",
+  "preferGlobal": true,
+  "bin": {
+    "mytools": "./bin/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Wahyu Ramadan",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "boxen": "^7.0.1",
+    "chalk": "^5.2.0",
+    "yargs": "^17.7.1"
+  }
 }
