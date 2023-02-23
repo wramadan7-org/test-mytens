@@ -1,19 +1,17 @@
 const fs = require('fs');
-// Default location file log in windows
-const defaultFile = 'C:/Windows/Panther/setuperr.log';
 
 /**
  * Read and convert file log to JSON
  * @returns JSON
  */
-const readAndConvertToJson = () => {
+const readAndConvertToJson = (fileParam) => {
   /**
    * Read file from file log
    * Then convert from buffer to string
    * Then delet the space use trim
    * Then split each paragraph (paragraph1, paragraph2, paragraph3)
    */
-  const file = fs.readFileSync(defaultFile).toString().trim().split('\n');
+  const file = fs.readFileSync(fileParam).toString().trim().split('\n');
 
   const arrayDefault = [];
 
