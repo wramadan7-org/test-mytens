@@ -89,7 +89,23 @@ const readAndConvertToText = (fileParam) => {
   return text;
 };
 
+/**
+ * Write file JSON
+ * @param { String } locationParam
+ * @returns JSON
+ */
+const writeFileToJson = (locationParam) => {
+  // Convert to JSON
+  const readFileJson = readAndConvertToJson();
+
+  // Set file name and write the data inside file (data is result of convert JSON)
+  fs.writeFileSync(`${locationParam}/errorLog.json`, readFileJson);
+
+  return readFileJson;
+};
+
 module.exports = {
   readAndConvertToJson,
   readAndConvertToText,
+  writeFileToJson,
 };
