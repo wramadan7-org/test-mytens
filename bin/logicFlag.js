@@ -61,6 +61,35 @@ const readAndConvertToJson = (fileParam) => {
   return JSON.stringify(arrayDefault, null, 2);
 };
 
+/**
+ * Read and convert file log to TEXT
+ * @returns TEXT
+ */
+const readAndConvertToText = (fileParam) => {
+  // Convert file to json first
+  const readJson = readAndConvertToJson(fileParam);
+  // Parsing json
+  const parseJson = JSON.parse(readJson);
+
+  const arrayDefault = [];
+
+  parseJson.forEach((value) => {
+    // Get the value of object
+    const getValueObject = Object.values(value);
+    // Append new line in last index of element array
+    getValueObject.push('\n');
+    const joinValue = getValueObject.join(' ');
+
+    arrayDefault.push(joinValue);
+  });
+
+  // Change to string and split with , then join it again
+  const text = arrayDefault.toString().split(',').join('');
+
+  return text;
+};
+
 module.exports = {
   readAndConvertToJson,
+  readAndConvertToText,
 };
