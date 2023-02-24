@@ -49,7 +49,7 @@ if ((options.type && options.type.length) && (options.output && options.output.l
 
       console.log('Loading...');
 
-      readAndConvertToJson(defaultFileLog);
+      console.log(readAndConvertToJson(defaultFileLog));
 
       console.log('Success to convert file LOG to JSON...');
 
@@ -66,7 +66,7 @@ if ((options.type && options.type.length) && (options.output && options.output.l
 
       console.log('Loading...');
 
-      readAndConvertToText(defaultFileLog);
+      console.log(readAndConvertToText(defaultFileLog));
 
       console.log('Success to convert file LOG to TEXT...');
 
@@ -83,7 +83,7 @@ if ((options.type && options.type.length) && (options.output && options.output.l
 
       console.log('Loading...');
 
-      readAndConvertToText(defaultFileLog);
+      console.log(readAndConvertToText(defaultFileLog));
 
       console.log('Success to convert file LOG to TEXT...');
 
