@@ -46,7 +46,7 @@ Proccess to write file...
 Success to write file to JSON...
 ```
 
-### Example Converting JSON file to LOG file
+### Example Converting LOG file to PlainText file
 ```sell
 > mytools -t text -o D:\Project\Test\TestMyTens
 
