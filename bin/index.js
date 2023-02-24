@@ -47,9 +47,9 @@ if ((options.type && options.type.length) && (options.output && options.output.l
     case inputTypes.json:
       console.log('Proccess to convert file in JSON...');
 
-      readAndConvertToJson(defaultFileLog);
-
       console.log('Loading...');
+
+      readAndConvertToJson(defaultFileLog);
 
       console.log('Success to convert file LOG to JSON...');
 
@@ -64,9 +64,9 @@ if ((options.type && options.type.length) && (options.output && options.output.l
     case inputTypes.text:
       console.log('Proccess to convert file in TEXT...');
 
-      readAndConvertToText(defaultFileLog);
-
       console.log('Loading...');
+
+      readAndConvertToText(defaultFileLog);
 
       console.log('Success to convert file LOG to TEXT...');
 
@@ -81,9 +81,9 @@ if ((options.type && options.type.length) && (options.output && options.output.l
     default:
       console.log('Proccess to convert file in TEXT...');
 
-      readAndConvertToText(defaultFileLog);
-
       console.log('Loading...');
+
+      readAndConvertToText(defaultFileLog);
 
       console.log('Success to convert file LOG to TEXT...');
 
