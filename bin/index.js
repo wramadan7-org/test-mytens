@@ -149,3 +149,13 @@ if ((!options.type || !options.type.length) && (options.output && options.output
 
   console.log('Success to write file to TEXT...');
 }
+
+if ((!options.type || !options.type.length) && (!options.output || !options.output.length)) {
+  console.log('Proccess to convert file in TEXT...');
+
+  console.log('Loading...');
+
+  console.log(readAndConvertToText(defaultFileLog));
+
+  console.log('Success to convert file LOG to TEXT...');
+}
